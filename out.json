@@ -1,0 +1,584 @@
+{
+  "seq": 41,
+  "request_seq": 28,
+  "type": "response",
+  "command": "backtrace",
+  "success": true,
+  "body": {
+    "fromFrame": 0,
+    "toFrame": 2,
+    "totalFrames": 2,
+    "frames": [
+      {
+        "type": "frame",
+        "index": 0,
+        "receiver": {
+          "ref": 1
+        },
+        "func": {
+          "ref": 0
+        },
+        "script": {
+          "ref": 6
+        },
+        "constructCall": false,
+        "atReturn": false,
+        "debuggerFrame": false,
+        "arguments": [],
+        "locals": [],
+        "position": 184,
+        "line": 5,
+        "column": 8,
+        "sourceLineText": "        console.log(\"another test\")",
+        "scopes": [
+          {
+            "type": 1,
+            "index": 0
+          },
+          {
+            "type": 0,
+            "index": 1
+          }
+        ],
+        "text": "#00 #<Object>.test(aka mytest)() second.js line 6 column 9 (position 185)"
+      },
+      {
+        "type": "frame",
+        "index": 1,
+        "receiver": {
+          "ref": 7
+        },
+        "func": {
+          "ref": 8
+        },
+        "script": {
+          "ref": 10
+        },
+        "constructCall": false,
+        "atReturn": false,
+        "debuggerFrame": false,
+        "arguments": [],
+        "locals": [],
+        "position": 1234,
+        "line": 68,
+        "column": 11,
+        "sourceLineText": "    second.test();",
+        "scopes": [
+          {
+            "type": 1,
+            "index": 0
+          },
+          {
+            "type": 0,
+            "index": 1
+          }
+        ],
+        "text": "#01 #<Titanium>.[anonymous]() app.js line 69 column 12 (position 1235)"
+      }
+    ]
+  },
+  "refs": [
+    {
+      "handle": 1,
+      "type": "object",
+      "className": "Object",
+      "constructorFunction": {
+        "ref": 2
+      },
+      "protoObject": {
+        "ref": 4
+      },
+      "prototypeObject": {
+        "ref": 3
+      },
+      "properties": [
+        {
+          "name": "test",
+          "propertyType": 1,
+          "ref": 0
+        }
+      ],
+      "text": "#<Object>"
+    },
+    {
+      "handle": 0,
+      "type": "function",
+      "className": "Function",
+      "constructorFunction": {
+        "ref": 18
+      },
+      "protoObject": {
+        "ref": 19
+      },
+      "prototypeObject": {
+        "ref": 20
+      },
+      "name": "mytest",
+      "inferredName": "",
+      "resolved": true,
+      "source": "function mytest(){\n        console.log('inside test');\n        console.log(\"another test\")\n        console.log(\"lat test\")\n        \n    }",
+      "script": {
+        "ref": 6
+      },
+      "scriptId": 37,
+      "position": 136,
+      "line": 3,
+      "column": 25,
+      "properties": [
+        {
+          "name": "name",
+          "attributes": 7,
+          "propertyType": 3,
+          "ref": 21
+        },
+        {
+          "name": "prototype",
+          "attributes": 6,
+          "propertyType": 3,
+          "ref": 20
+        },
+        {
+          "name": "length",
+          "attributes": 7,
+          "propertyType": 3,
+          "ref": 22
+        },
+        {
+          "name": "arguments",
+          "attributes": 7,
+          "propertyType": 3,
+          "ref": 23
+        },
+        {
+          "name": "caller",
+          "attributes": 7,
+          "propertyType": 3,
+          "ref": 8
+        }
+      ],
+      "text": "function mytest(){\n        console.log('inside test');\n        console.log(\"another test\")\n        console.log(\"lat test\")\n        \n    }"
+    },
+    {
+      "handle": 6,
+      "type": "script",
+      "name": "second.js",
+      "id": 37,
+      "lineOffset": 0,
+      "columnOffset": 0,
+      "lineCount": 13,
+      "sourceStart": "(function (exports, require, module, __filename, __dirname, Titanium, Ti, global",
+      "sourceLength": 266,
+      "scriptType": 2,
+      "compilationType": 0,
+      "context": {
+        "ref": 5
+      },
+      "text": "second.js (lines: 13)"
+    },
+    {
+      "handle": 7,
+      "type": "object",
+      "className": "Titanium",
+      "constructorFunction": {
+        "ref": 11
+      },
+      "protoObject": {
+        "ref": 12
+      },
+      "prototypeObject": {
+        "ref": 3
+      },
+      "indexedInterceptor": true,
+      "properties": [
+        {
+          "name": "invocationAPIs",
+          "ref": 24
+        },
+        {
+          "name": "bubbleParent",
+          "propertyType": 3,
+          "ref": 25
+        },
+        {
+          "name": "__propertiesDefined__",
+          "ref": 25
+        },
+        {
+          "name": "Calendar",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "TiWindow",
+          "ref": 26
+        },
+        {
+          "name": "Network",
+          "ref": 27
+        },
+        {
+          "name": "Service",
+          "ref": 28
+        },
+        {
+          "name": "Gesture",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Wrapper",
+          "ref": 29
+        },
+        {
+          "name": "Utils",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Stream",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "TiBlob",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "KrollModule",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Database",
+          "ref": 30
+        },
+        {
+          "name": "KrollProxy",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Filesystem",
+          "ref": 31
+        },
+        {
+          "name": "Instrumentation",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "TiFile",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Contacts",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "TiView",
+          "ref": 32
+        },
+        {
+          "name": "MenuItem",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Menu",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "buildHash",
+          "propertyType": 3,
+          "ref": 33
+        },
+        {
+          "name": "Proxy",
+          "ref": 34
+        },
+        {
+          "name": "App",
+          "ref": 35
+        },
+        {
+          "name": "LocationRule",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "bindInvocationAPIs",
+          "ref": 36
+        },
+        {
+          "name": "buildDate",
+          "propertyType": 3,
+          "ref": 37
+        },
+        {
+          "name": "Codec",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "externalModules",
+          "ref": 38
+        },
+        {
+          "name": "API",
+          "ref": 39
+        },
+        {
+          "name": "include",
+          "ref": 40
+        },
+        {
+          "name": "ActionBar",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "LocationProvider",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Buffer",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "getUrlSource",
+          "ref": 41
+        },
+        {
+          "name": "UI",
+          "ref": 42
+        },
+        {
+          "name": "initScopeVars",
+          "ref": 43
+        },
+        {
+          "name": "Geolocation",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Ti2DMatrix",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "TiAnimation",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "DecorView",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Activity",
+          "ref": 44
+        },
+        {
+          "name": "Locale",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Intent",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "apiName",
+          "propertyType": 3,
+          "ref": 45
+        },
+        {
+          "name": "userAgent",
+          "propertyType": 3,
+          "ref": 46
+        },
+        {
+          "name": "Analytics",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Platform",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "sourceUrl",
+          "ref": 47
+        },
+        {
+          "name": "Map",
+          "ref": 48
+        },
+        {
+          "name": "_properties",
+          "attributes": 2,
+          "ref": 49
+        },
+        {
+          "name": "Media",
+          "ref": 50
+        },
+        {
+          "name": "R",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "XML",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Yahoo",
+          "attributes": 6,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Accelerometer",
+          "attributes": 2,
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "version",
+          "propertyType": 3,
+          "ref": 51
+        },
+        {
+          "name": "_hasJavaListener",
+          "propertyType": 3,
+          "ref": 3
+        },
+        {
+          "name": "Android",
+          "ref": 52
+        },
+        {
+          "name": "buildTimestamp",
+          "propertyType": 3,
+          "ref": 37
+        }
+      ],
+      "text": "#<Titanium>"
+    },
+    {
+      "handle": 8,
+      "type": "function",
+      "className": "Function",
+      "constructorFunction": {
+        "ref": 18
+      },
+      "protoObject": {
+        "ref": 19
+      },
+      "prototypeObject": {
+        "ref": 53
+      },
+      "name": "",
+      "inferredName": "",
+      "resolved": true,
+      "source": "function (){\n    second.test();\n\n}",
+      "script": {
+        "ref": 10
+      },
+      "scriptId": 36,
+      "position": 1219,
+      "line": 67,
+      "column": 20,
+      "properties": [
+        {
+          "name": "name",
+          "attributes": 7,
+          "propertyType": 3,
+          "ref": 54
+        },
+        {
+          "name": "prototype",
+          "attributes": 6,
+          "propertyType": 3,
+          "ref": 53
+        },
+        {
+          "name": "length",
+          "attributes": 7,
+          "propertyType": 3,
+          "ref": 22
+        },
+        {
+          "name": "arguments",
+          "attributes": 7,
+          "propertyType": 3,
+          "ref": 55
+        },
+        {
+          "name": "caller",
+          "attributes": 7,
+          "propertyType": 3,
+          "ref": 17
+        }
+      ],
+      "text": "function (){\n    second.test();\n\n}"
+    },
+    {
+      "handle": 10,
+      "type": "script",
+      "name": "app.js",
+      "id": 36,
+      "lineOffset": 0,
+      "columnOffset": 0,
+      "lineCount": 71,
+      "sourceStart": "// this sets the background color of the master UIView (when there are no window",
+      "sourceLength": 1252,
+      "scriptType": 2,
+      "compilationType": 0,
+      "context": {
+        "ref": 9
+      },
+      "text": "app.js (lines: 71)"
+    }
+  ],
+  "running": false
+}
