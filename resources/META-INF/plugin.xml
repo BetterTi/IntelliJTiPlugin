@@ -36,16 +36,24 @@
 
   <project-components>
 
-    
 
+    <component>
+      <implementation-class>com.bajdev.titanium.intellij.plugins.TitaniumProject</implementation-class>
+    </component>
   </project-components>
 
   <module-components>
-    
 
+
+    <component>
+      <implementation-class>Titanium</implementation-class>
+    </component>
   </module-components>
 
   <application-components>
+    <component>
+      <implementation-class>com.bajdev.titanium.intellij.plugins.TitaniumApplication</implementation-class>
+    </component>
   </application-components>
   
   
