@@ -7,6 +7,7 @@ import java.io.File;
 
 public class TitaniumCommandLine extends GeneralCommandLine {
 	public TitaniumCommandLine(TitaniumRunConfiguration o) {
+
 		super("titanium",
 						"build",
 						"--sdk", "3.5.1.GA",

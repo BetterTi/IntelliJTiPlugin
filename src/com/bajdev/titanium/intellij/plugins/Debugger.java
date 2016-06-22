@@ -53,6 +53,7 @@ public class Debugger extends com.intellij.xdebugger.XDebugProcess {
 		LogManager.getRootLogger().getAppender("CONSOLE-WARN").clearFilters();
 
 
+
 		_commandLine = new TitaniumCommandLine(config);
 
 		_titaniumDebugger.initialize();

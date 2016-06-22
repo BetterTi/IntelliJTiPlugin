@@ -1,12 +1,20 @@
 package com.bajdev.titanium.intellij.plugins;
 
+import com.intellij.application.options.ModulesComboBox;
 import com.intellij.execution.configurations.RunConfiguration;
+import com.intellij.openapi.module.Module;
 import com.intellij.openapi.options.ConfigurationException;
 import com.intellij.openapi.options.SettingsEditor;
+import com.intellij.openapi.roots.ui.configuration.ModulesAlphaComparator;
+import com.intellij.openapi.ui.LabeledComponent;
+import com.intellij.ui.SortedComboBoxModel;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class TitaniumSettingsEditor extends SettingsEditor<TitaniumRunConfiguration> {
 
@@ -15,8 +23,12 @@ public class TitaniumSettingsEditor extends SettingsEditor<TitaniumRunConfigurat
 	private JComponent _editor;
 
 
-	public TitaniumSettingsEditor(){
+	public TitaniumSettingsEditor(Module[] modules){
 		_editor = new JPanel(new GridBagLayout());
+
+		ModulesComboBox b = new ModulesComboBox();
+		LabeledComponent<ModulesComboBox> box = LabeledComponent.create(b, "Module");
+		box.getComponent().setModules(Arrays.asList(modules));
 
 		GridBagConstraints constraints = new GridBagConstraints();
 
@@ -37,7 +49,7 @@ public class TitaniumSettingsEditor extends SettingsEditor<TitaniumRunConfigurat
 		constraints.gridy = 0;
 		constraints.weightx = 1;
 		constraints.fill = GridBagConstraints.HORIZONTAL;
-		_editor.add(_srcDirField, constraints);
+		_editor.add(box, constraints);
 
 
 		constraints.gridx = 0;

@@ -8,7 +8,7 @@ import com.intellij.openapi.roots.ModifiableRootModel;
 /**
  * Created by johnsba1 on 6/14/16.
  */
-public class TitaniumModuleBuilder extends ModuleBuilder {
+public class TitaniumModuleBuilder{}/* extends ModuleBuilder {
     @Override
     public void setupRootModel(ModifiableRootModel modifiableRootModel) throws ConfigurationException {
 
@@ -16,6 +16,7 @@ public class TitaniumModuleBuilder extends ModuleBuilder {
 
     @Override
     public ModuleType getModuleType() {
-        return TitaniumModuleType.getInstance();
+        return TitaniumModuleTypeBuilder.getInstance();
     }
 }
+*/

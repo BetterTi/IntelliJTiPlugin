@@ -1,6 +1,6 @@
 <idea-plugin version="2">
     <extensions defaultExtensionNs="com.intellij">
-        <moduleType id="GO_MODULE" implementationClass="com.bajdev.titanium.intellij.plugins.TitaniumModuleType"/>
+        <moduleType id="GO_MODULE" implementationClass="com.bajdev.titanium.intellij.plugins.TitaniumModuleTypeBuilder"/>
         <moduleConfigurationEditorProvider implementation="com.goide.configuration.GoModuleEditorsProvider" order="first"/>
         <editorNotificationProvider implementation="com.goide.inspections.WrongModuleTypeNotificationProvider"/>
 

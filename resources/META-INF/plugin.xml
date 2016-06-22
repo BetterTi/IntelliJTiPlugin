@@ -31,31 +31,9 @@
     <!--<xdebugger.debuggerSupport implementation="÷.bajdev.titanium.intellij.plugins.Debugger"/>-->
     <configurationType implementation="com.bajdev.titanium.intellij.plugins.TitaniumConfigurationType"/>
     <xdebugger.breakpointType implementation="com.intellij.javascript.debugger.breakpoints.JavaScriptBreakpointType"></xdebugger.breakpointType>
-
+    <moduleBuilder builderClass="com.bajdev.titanium.intellij.plugins.TitaniumModuleTypeBuilder" />
+    <!--<moduleType implementationClass="com.bajdev.titanium.intellij.plugins.TitaniumModuleType"/>-->
   </extensions>
-
-  <project-components>
-
-
-    <component>
-      <implementation-class>com.bajdev.titanium.intellij.plugins.TitaniumProject</implementation-class>
-    </component>
-  </project-components>
-
-  <module-components>
-
-
-    <component>
-      <implementation-class>Titanium</implementation-class>
-    </component>
-  </module-components>
-
-  <application-components>
-    <component>
-      <implementation-class>com.bajdev.titanium.intellij.plugins.TitaniumApplication</implementation-class>
-    </component>
-  </application-components>
-  
   
 
   <actions>
