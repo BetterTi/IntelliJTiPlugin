@@ -66,7 +66,7 @@ public class TitaniumAndroidDebugger implements TitaniumDebugger {
 	public void start(){
 		Log.debug("Checking if any existing debug session is going");
 		ProcessBuilder b = new ProcessBuilder();
-		b.command("adb", "forward", "--list");
+		b.command("C:\\Users\\bourtney\\android-sdk-windows\\platform-tools\\adb", "forward", "--list");
 		try {
 			Process p = b.start();
 			BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -80,7 +80,7 @@ public class TitaniumAndroidDebugger implements TitaniumDebugger {
 			for(String line : lines){
 				if(line.contains("tcp:54321")){
 					b = new ProcessBuilder();
-					b.command("adb", "forward", "--remove", "tcp:54321");
+					b.command("C:\\Users\\bourtney\\android-sdk-windows\\platform-tools\\adb", "forward", "--remove", "tcp:54321");
 					try {
 						int result = b.start().waitFor();
 						if(result != 0){

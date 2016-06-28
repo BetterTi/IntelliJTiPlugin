@@ -15,6 +15,7 @@ import com.intellij.execution.runners.ExecutionEnvironment;
 import com.intellij.execution.runners.ProgramRunner;
 import com.intellij.execution.ui.ConsoleView;
 import com.intellij.execution.ui.ExecutionConsole;
+import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleManager;
 import com.intellij.openapi.options.SettingsEditor;
 import com.intellij.openapi.project.Project;
@@ -46,15 +47,29 @@ public class TitaniumRunConfiguration extends LocatableConfigurationBase  implem
 	private String _srcDirectory = "Resources";
 	private String _platform = "Android";
 	private String _executionDirectory = "./";
+	private String _module;
 
 	protected TitaniumRunConfiguration(Project project, @NotNull ConfigurationFactory factory, String name) {
 		super(project, factory, name);
 	}
 
+	@Nullable
+	public String getTitaniumPath(){
+		if(_module == null){
+			return null;
+		}
+		Module m = ModuleManager.getInstance(getProject()).findModuleByName(_module);
+		if(m == null){
+			return null;
+		}
+		return m.getOptionValue("titanium.cli");
+
+	}
+
 	@NotNull
 	@Override
 	public SettingsEditor<? extends RunConfiguration> getConfigurationEditor() {
-		return new TitaniumSettingsEditor(ModuleManager.getInstance(getProject()).getModules());
+		return new TitaniumSettingsEditor(getProject());
 	}
 	@Nullable
 	@Override
@@ -117,6 +132,14 @@ public class TitaniumRunConfiguration extends LocatableConfigurationBase  implem
 	@Override
 	public boolean canRun(@NotNull String s, @NotNull RunProfile runProfile) {
 		return true;
+	}
+
+	public void setModule(String module) {
+		_module = module;
+	}
+
+	public String getModule() {
+		return _module;
 	}
 
 

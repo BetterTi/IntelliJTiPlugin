@@ -43,7 +43,7 @@ public class Debugger extends com.intellij.xdebugger.XDebugProcess {
 	private Class<? extends XBreakpointType> _javascriptBreakpointType;
 
 
-	protected Debugger(@NotNull XDebugSession session, TitaniumRunConfiguration config) {
+	protected Debugger(@NotNull XDebugSession session, @NotNull TitaniumRunConfiguration config) {
 		super(session);
 		_titaniumDebugger = new TitaniumAndroidDebugger();
 		_titaniumDebugger.start();
