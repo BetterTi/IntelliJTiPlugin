@@ -1,6 +1,7 @@
 package com.betterti.titanium.intellij.plugins.protocol;
 
 import com.betterti.titanium.intellij.plugins.protocol.android.AndroidDataQueue;
+import com.betterti.titanium.intellij.plugins.protocol.android.AndroidDebugCommands;
 import com.betterti.titanium.intellij.plugins.protocol.api.ShutdownCallback;
 import com.betterti.titanium.intellij.plugins.protocol.api.TitaniumDebugger;
 import com.betterti.titanium.intellij.plugins.protocol.api.FramesCallback;
@@ -154,19 +155,17 @@ public class TitaniumAndroidDebugger implements TitaniumDebugger {
 
 	@Override
 	public void stepOver() {
-//		sendCommand("stepOver", true);
-
+		send(AndroidDebugCommands.stepOver());
 	}
 
 	@Override
 	public void stepInto() {
-//		sendCommand("stepInto", true);
-
+		send(AndroidDebugCommands.stepInto());
 	}
 
 	@Override
 	public void stepReturn() {
-//		sendCommand("stepReturn", true);
+		send(AndroidDebugCommands.stepReturn());
 	}
 
 	@Override

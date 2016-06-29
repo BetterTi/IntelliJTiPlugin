@@ -1,5 +1,7 @@
 package com.betterti.titanium.intellij.plugins.protocol;
 
+import com.betterti.titanium.intellij.plugins.protocol.android.AndroidDebugCommands;
+
 import java.util.concurrent.CountDownLatch;
 
 public class SubmittedRequest {

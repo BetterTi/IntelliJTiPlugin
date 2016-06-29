@@ -1,4 +1,4 @@
-package com.betterti.titanium.intellij.plugins.protocol;
+package com.betterti.titanium.intellij.plugins.protocol.android;
 
 import com.betterti.titanium.intellij.plugins.protocol.api.FrameResult;
 import com.betterti.titanium.intellij.plugins.protocol.api.FramesCallback;
@@ -80,6 +80,39 @@ public class AndroidDebugCommands {
 		map.put("expression", "Ti.API.terminate()");
 		map.put("inlineRefs", true);
 		map.put("global", true);
+		pending.setArgs(map);
+		return pending;
+	}
+
+	public static AndroidDebugCommands stepOver() {
+		/*
+		{ "seq"       : <number>,
+  "type"      : "request",
+  "command"   : "continue",
+  "arguments" : { "stepaction" : <"in", "next" or "out">,
+                  "stepcount"  : <number of steps (default 1)>
+                }
+}
+		 */
+		AndroidDebugCommands pending = new AndroidDebugCommands(null, "continue", true);
+		final HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("stepaction", "next");
+		pending.setArgs(map);
+		return pending;
+	}
+
+	public static AndroidDebugCommands stepInto() {
+		AndroidDebugCommands pending = new AndroidDebugCommands(null, "continue", true);
+		final HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("stepaction", "in");
+		pending.setArgs(map);
+		return pending;
+	}
+
+	public static AndroidDebugCommands stepReturn() {
+		AndroidDebugCommands pending = new AndroidDebugCommands(null, "continue", true);
+		final HashMap<String, Object> map = new HashMap<String, Object>();
+		map.put("stepaction", "out");
 		pending.setArgs(map);
 		return pending;
 	}

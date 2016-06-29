@@ -1,6 +1,5 @@
 package com.betterti.titanium.intellij.plugins.protocol.android;
 
-import com.betterti.titanium.intellij.plugins.protocol.AndroidDebugCommands;
 import com.betterti.titanium.intellij.plugins.protocol.AndroidSubmittedRequest;
 import com.betterti.titanium.intellij.plugins.protocol.TitaniumAndroidDebugger;
 import com.betterti.titanium.intellij.plugins.protocol.api.ShutdownCallback;

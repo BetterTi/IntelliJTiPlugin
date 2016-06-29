@@ -1,5 +1,6 @@
 package com.betterti.titanium.intellij.plugins.protocol;
 
+import com.betterti.titanium.intellij.plugins.protocol.android.AndroidDebugCommands;
 import com.google.gson.Gson;
 
 import java.util.HashMap;
