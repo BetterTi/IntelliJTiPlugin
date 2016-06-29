@@ -27,12 +27,9 @@
   <depends>JavaScriptDebugger</depends>
 
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Add your extensions here -->
-    <!--<xdebugger.debuggerSupport implementation="÷.bajdev.titanium.intellij.plugins.Debugger"/>-->
-    <configurationType implementation="com.bajdev.titanium.intellij.plugins.TitaniumConfigurationType"/>
+    <configurationType implementation="com.betterti.titanium.intellij.plugins.run.TitaniumConfigurationType"/>
     <xdebugger.breakpointType implementation="com.intellij.javascript.debugger.breakpoints.JavaScriptBreakpointType"></xdebugger.breakpointType>
-    <moduleBuilder builderClass="com.bajdev.titanium.intellij.plugins.TitaniumModuleTypeBuilder" />
-    <!--<moduleType implementationClass="com.bajdev.titanium.intellij.plugins.TitaniumModuleType"/>-->
+    <moduleBuilder builderClass="com.betterti.titanium.intellij.plugins.module.TitaniumModuleTypeBuilder" />
   </extensions>
   
 
