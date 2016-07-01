@@ -9,3 +9,6 @@ cache:
   directories:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
+notifications:
+  email:
+    - baj306@gmail.com
