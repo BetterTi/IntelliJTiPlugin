@@ -1,39 +1,16 @@
 buildscript {
   repositories {
-    mavenLocal()
-    maven { url 'http://repo.grails.org/grails/repo' }
-    maven { url 'http://repo.grails.org/grails/plugins' }
-//    maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }
+    maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }
   }
 }
-
 
 plugins {
-  id "org.jetbrains.intellij" version "0.1.6"
+  id "org.jetbrains.intellij" version "0.1.9"
 }
 
-apply plugin: 'java'
-task wrapper(type: Wrapper) {
-   gradleVersion = '2.0' //version required
-}
-
-
-repositories {
+intellij {
+  pluginName "Titanium IDEA Plugin"
 }
 
 
-sourceSets {
-  main {
-    java {
-      srcDir 'src'
-    }
-//    output.classesDir = "$workDir/client/program"
-  }
-//  test {
-//    java {
-//      srcDir 'sources/test/java'
-//    }
-//    output.classesDir = "$workDir/client/tests"
-//    output.resourcesDir = "$workDir/client/tests"
-//  }
-}
+task check(dependsOn:["buildPlugin"])
