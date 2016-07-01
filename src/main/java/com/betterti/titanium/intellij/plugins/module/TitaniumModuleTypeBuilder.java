@@ -62,6 +62,27 @@ public class TitaniumModuleTypeBuilder extends ModuleBuilder implements SourcePa
         return _opttionStep == null ? _opttionStep = new TitaniumModuleModifySettingsWizardStep() : _opttionStep;
     }
 
+
+
+
+    @Nullable
+    @Override
+    public ModuleWizardStep modifySettingsStep(@NotNull SettingsStep settingsStep) {
+        return super.modifySettingsStep(settingsStep);
+    }
+
+    @Override
+    public ModuleWizardStep modifyProjectTypeStep(@NotNull SettingsStep settingsStep) {
+        return super.modifyProjectTypeStep(settingsStep);
+    }
+
+    @Override
+    public ModuleWizardStep modifyStep(SettingsStep settingsStep) {
+        return _opttionStep == null ? _opttionStep = new TitaniumModuleModifySettingsWizardStep() : _opttionStep;
+    }
+
+
+
     @Override
     public void setupRootModel(final ModifiableRootModel rootModel) throws com.intellij.openapi.options.ConfigurationException {
 
@@ -80,7 +101,9 @@ public class TitaniumModuleTypeBuilder extends ModuleBuilder implements SourcePa
                     contentEntry.addSourceFolder(sourceRoot, false, sourcePath.second);
                 }
             }
-            contentEntry.addExcludeFolder("file://$MODULE_DIR$/build");
+//            final VirtualFile excludeRoot = LocalFileSystem.getInstance().fin
+//                    .refreshAndFindFileByPath(FileUtil.toSystemIndependentName("build"));
+//            contentEntry.addExcludeFolder("build");
         }
 //        final ModuleLibraryOrderEntryImpl orderEntry = new ModuleLibraryOrderEntryImpl(name, type, myRootModel, myProjectRootManager);
 

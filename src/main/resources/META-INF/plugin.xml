@@ -24,12 +24,13 @@
   <depends>com.intellij.modules.lang</depends>
 
   -->
-  <depends>JavaScriptDebugger</depends>
+  <depends optional="true">JavaScript</depends>
 
   <extensions defaultExtensionNs="com.intellij">
     <configurationType implementation="com.betterti.titanium.intellij.plugins.run.TitaniumConfigurationType"/>
-    <xdebugger.breakpointType implementation="com.intellij.javascript.debugger.breakpoints.JavaScriptBreakpointType"></xdebugger.breakpointType>
-    <moduleBuilder builderClass="com.betterti.titanium.intellij.plugins.module.TitaniumModuleTypeBuilder" />
+    <!--<xdebugger.breakpointType implementation="com.intellij.javascript.debugger.breakpoints.JavaScriptBreakpointType"></xdebugger.breakpointType>-->
+    <moduleType id="TitaniumModule" implementationClass="com.betterti.titanium.intellij.plugins.module.TitaniumModuleType"></moduleType>
+    <!--<moduleBuilder builderClass="com.betterti.titanium.intellij.plugins.module.TitaniumModuleTypeBuilder" />-->
   </extensions>
   
 
