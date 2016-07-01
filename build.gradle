@@ -13,4 +13,4 @@ intellij {
 }
 
 
-task check(dependsOn:["buildPlugin"])
+//task check(dependsOn:["buildPlugin"])
