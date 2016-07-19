@@ -7,6 +7,7 @@ import com.intellij.testFramework.LightProjectDescriptor;
 import com.intellij.testFramework.builders.JavaModuleFixtureBuilder;
 import com.intellij.testFramework.fixtures.*;
 import org.jetbrains.annotations.NotNull;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -25,6 +26,8 @@ public class FirstTestCase extends LightPlatformCodeInsightFixtureTestCase {
     return false;
   }
 
+
+
   @Override
   protected LightProjectDescriptor getProjectDescriptor() {
     return new LightProjectDescriptor(){
@@ -34,13 +37,30 @@ public class FirstTestCase extends LightPlatformCodeInsightFixtureTestCase {
 
 
         myFixture = JavaTestFixtureFactory.getFixtureFactory().createCodeInsightFixture(projectBuilder.getFixture());
+
       }
     };
   }
 
+
+
+
+  @Override
+  protected String getBasePath() {
+    return ".";
+  }
+
+  @Override
+  protected String getTestDataPath() {
+    return ".";
+  }
+
   @Test
+  @Ignore
   public void testThis(){
 
   }
+
+
 
 }
